@@ -4,4 +4,4 @@ echo "Hello world";
 
 ?>
 
-<a href="db/conn.php">ir a conn</a>
+<a href="db/prueba.php">ir a conn</a>
