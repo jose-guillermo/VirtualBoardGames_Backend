@@ -16,21 +16,27 @@ $string = "user=$user password=$pass host=$host port=$port dbname=$dbname";
 $conn = pg_connect($string);
 
 if (!$conn) {
-    echo "Error de conexión a la base de datos.";
+    echo json_encode([
+        "status" => "error", 
+        "message" => "Error de conexión a la base de datos."
+    ]);
     exit;
 } else {
-    echo "Conexión exitosa a la base de datos.<br>";
+    echo json_encode([
+        "status" => "success", 
+        "message" => "Conexión exitosa a la base de datos.<br>"
+    ]);
 }
 
-$query = "ALTER TABLE public.usuarios ENABLE ROW LEVEL SECURITY;";
+// $query = "ALTER TABLE public.usuarios ENABLE ROW LEVEL SECURITY;";
 
-$result = pg_query($conn, $query);
+// $result = pg_query($conn, $query);
 
-if ($result) {
-    echo "Tabla 'usuarios' creada exitosamente.";
-} else {
-    echo "Error al crear la tabla: " . pg_last_error($conn);
-}
+// if ($result) {
+//     echo "Tabla 'usuarios' creada exitosamente.";
+// } else {
+//     echo "Error al crear la tabla: " . pg_last_error($conn);
+// }
 
 // Cerrar la conexión
 pg_close($conn);
