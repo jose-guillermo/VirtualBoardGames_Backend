@@ -1,5 +1,8 @@
 # archivos para ignorar
 .env
+composer.json
+composer.lock
+composer.phar
 
 
 # directorios para ignorar
