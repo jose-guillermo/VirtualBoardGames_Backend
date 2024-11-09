@@ -1,9 +1,9 @@
 <?php
 
 // Borrar a la hora para desplegarlo correctamente
-require_once __DIR__ . '/../vendor/autoload.php'; 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
-$dotenv->load();
+// require_once __DIR__ . '/../vendor/autoload.php'; 
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
+// $dotenv->load();
 
 $host= $_ENV["DB_HOST"];
 $user= $_ENV["DB_USER"];
