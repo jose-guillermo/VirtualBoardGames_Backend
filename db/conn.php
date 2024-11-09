@@ -1,7 +1,5 @@
 <?php
 
-
-
 $host= $_ENV["DB_HOST"];
 $user= $_ENV["DB_USER"];
 $pass= $_ENV["DB_PASS"];
@@ -9,6 +7,8 @@ $port= $_ENV["DB_PORT"];
 $dbname= $_ENV["DB_NAME"];
 
 $string = "user=$user password=$pass host=$host port=$port dbname=$dbname";
+
+echo $string;
 
 $conn = pg_connect($string);
 
