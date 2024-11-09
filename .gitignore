@@ -1,3 +1,6 @@
+# archivos para ignorar
 .env
 
+
+# directorios para ignorar
 vendor/
