@@ -21,23 +21,21 @@ if (!$conn) {
         "message" => "Error de conexión a la base de datos."
     ]);
     exit;
-} else {
-    echo json_encode([
-        "status" => "success", 
-        "message" => "Conexión exitosa a la base de datos.<br>"
-    ]);
-}
+} 
+
+$query = "DROP TABLE IF EXISTS usuarios";
+$result = pg_query($conn, $query);
 
 // $query = "ALTER TABLE public.usuarios ENABLE ROW LEVEL SECURITY;";
 
 // $result = pg_query($conn, $query);
 
-// if ($result) {
-//     echo "Tabla 'usuarios' creada exitosamente.";
-// } else {
-//     echo "Error al crear la tabla: " . pg_last_error($conn);
-// }
+if ($result) {
+    echo "Tabla 'usuarios' creada exitosamente.";
+} else {
+    echo "Error al crear la tabla: " . pg_last_error($conn);
+}
 
 // Cerrar la conexión
-pg_close($conn);
+// pg_close($conn);
 ?>

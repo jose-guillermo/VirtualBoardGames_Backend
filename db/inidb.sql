@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS usuarios {
+    id VARCHAR(20) PRIMARY KEY,
+    nombreUsuario VARCHAR2(10),
+    algo BOOLEAN,
+}
+
+ALTER TABLE public.usuarios ENABLE ROW LEVEL SECURITY;
