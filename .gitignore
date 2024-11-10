@@ -1,6 +1,9 @@
 # archivos para ignorar
 .env
 
+user/inidb.php
+user/inidb.sql
+
 
 
 # directorios para ignorar

@@ -1,6 +1,6 @@
 <?php
 
-// Borrar a la hora para desplegarlo correctamente
+// Comentar a la hora de desplegarlo correctamente
 // require_once __DIR__ . '/../vendor/autoload.php'; 
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
 // $dotenv->load();
@@ -21,20 +21,9 @@ if (!$conn) {
         "message" => "Error de conexión a la base de datos."
     ]);
     exit;
-} 
-
-$query = "DROP TABLE IF EXISTS usuarios";
-$result = pg_query($conn, $query);
-
-// $query = "ALTER TABLE public.usuarios ENABLE ROW LEVEL SECURITY;";
+}
 
 // $result = pg_query($conn, $query);
-
-if ($result) {
-    echo "Tabla 'usuarios' creada exitosamente.";
-} else {
-    echo "Error al crear la tabla: " . pg_last_error($conn);
-}
 
 // Cerrar la conexión
 // pg_close($conn);
