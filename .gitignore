@@ -1,7 +1,6 @@
 # archivos para ignorar
 .env
-composer.lock
-composer.phar
+
 
 
 # directorios para ignorar
