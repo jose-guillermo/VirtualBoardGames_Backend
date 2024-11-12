@@ -4,7 +4,4 @@
 user/inidb.php
 user/inidb.sql
 
-
-
 # directorios para ignorar
-vendor/

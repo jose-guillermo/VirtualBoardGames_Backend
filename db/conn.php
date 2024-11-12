@@ -1,5 +1,4 @@
 <?php
-
 // Comentar a la hora de desplegarlo correctamente
 // require_once __DIR__ . '/../vendor/autoload.php'; 
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '../.env');
@@ -17,8 +16,8 @@ $conn = pg_connect($string);
 
 if (!$conn) {
     echo json_encode([
-        "status" => "error", 
-        "message" => "Error de conexión a la base de datos."
+        "exito" => false, 
+        "mensaje" => "Error de conexión a la base de datos."
     ]);
     exit;
 }

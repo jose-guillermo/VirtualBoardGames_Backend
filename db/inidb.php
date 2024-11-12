@@ -1,11 +1,7 @@
 <?php 
 
 exit;
-include "conn.php";
-
-
-
-
+require_once "conn.php";
 
 
 
