@@ -7,8 +7,8 @@
 $headers = getallheaders();
 
 header('Content-Type: application/json');
-if (isset($headers["apiKey"])){
-    if ($headers["apiKey"] !== $_ENV["API_KEY"]) {
+if (isset($headers["ApiKey"])){
+    if ($headers["ApiKey"] !== $_ENV["API_KEY"]) {
         echo json_encode([
             'exito' => false, 
             'mensaje' => 'La apikey no es correcta'
