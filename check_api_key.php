@@ -4,7 +4,7 @@
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env');
 // $dotenv->load();
 
-$headers = apache_request_headers();
+$headers = getallheaders();
 
 header('Content-Type: application/json');
 if (isset($headers["api_key"])){
