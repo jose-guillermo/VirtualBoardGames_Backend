@@ -17,7 +17,8 @@ if (isset($headers["api_key"])){
     }
 } else {
     echo json_encode([
-        'exito' => false, 
+        'exito' => false,
+        "headers" => $headers, 
         'mensaje' => 'No hay apikey'
     ]);
     die();
