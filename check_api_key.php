@@ -18,8 +18,6 @@ if (isset($headers["Apikey"])){
 } else {
     echo json_encode([
         'exito' => false,
-        "apikey" => $headers["Apikey"],
-        "headers" => $headers, 
         'mensaje' => 'No hay apikey'
     ]);
     die();
